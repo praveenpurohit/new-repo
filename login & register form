@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(show) {
+   if('a'==show)
+   {
+ document.getElementById('login').style = 'display:none'
+ document.getElementById('register').style = 'display:block';
+ }
+    if('b'==show) {
+    document.getElementById('register').style = 'display:none';
+    document.getElementById('login').style = 'display:block';
+}
+        }
+    </script>
+    <style>
+body {
+    height: 50vh;
+    background-color: skyblue;
+    display: block;
+} 
+.login-box {
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #505050;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+}
+#register{
+    display: none;
+}
+h1 {
+    color: white;
+    font-size: 1.8rem;
+}
+input {
+    background-color: transparent;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    line-height: 50px;
+}
+input:focus-visible {
+    outline: 0;
+    
+}
+input::placeholder {
+    color: white;
+}
+.submit {
+    width: 100px;
+    height: 30px;
+    margin-top: 35px;
+    border: none;
+    background-color: skyblue;
+    border-radius: 10px;
+    font-size: 1.2em;
+    box-shadow: 0 0 20px skyblue;
+    display: block;
+    margin-left: 100px;
+}
+p a {
+    color: white;
+    border-bottom: 1px solid blue;
+    margin: 30px;
+    text-decoration: none;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <section id="login">
+        <div class="login-box">
+            <h1>Login</h1>
+            <input type="text" name="name" placeholder="username">
+            <input type="password" name="password" placeholder="password">
+            <button class="submit" type="submit">Submit</button>
+            <p><a href="#" onclick="fun('a')">Register now</a></p>
+        </div>
+    </section>
+    <section id="register">
+        <div class="login-box">
+            <h1>Register</h1>
+            <input type="username" name="username" placeholder="username" required>
+            <input type="email" name="email" placeholder="email" required>
+            <input type="password" name="password" placeholder="password" required>
+            <button class="submit" type="submit">Submit</button>
+            <p><a href="#" onclick="fun('b')">back to login</a></p>
+        </div>
+    </section>
+</body>
+
+</html>
